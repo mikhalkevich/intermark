@@ -68,24 +68,6 @@
         <x-sell-form></x-sell-form>
     </div>
     <div class="content-center">
-        <div class="border-1 shadow-2xl m-3 grid grid-cols-1 md:grid-cols-2">
-            <div class="h-52 w-full bg-gray-100"></div>
-            <div class="h-52 w-full bg-white">
-                <p class="text-sm pt-2 pl-2">ID: GRD123</p>
-                <p class="text- pt-2 pl-2"><a href="#" class="text-orange-950 hover:opacity-75">Греция</a>, <a href="#"
-                                                                                                               class="text-orange-950 hover:opacity-75">Крит</a>,
-                    <a href="#" class="text-orange-950 hover:opacity-75">Элунда</a></p>
-                <p class="text-sm pt-2 pl-2">Цена по запросу</p>
-                <p class="text-sm pt-2 pl-2"><a href="#" class="text-orange-950 hover:opacity-75">
-                        Великолепная вилла с 6 спальнями с отдельным гостевым домом. Вилла расположена в клубном поселке
-                        на 10 вилл с собственным частным пляжем и сервисом 5* отеля.
-                    </a></p>
-                <ul class="grid grid-cols-3 text-sm">
-                    <li class="text-center p-2 text-orange-950 hover:opacity-75">ВИЛЛА</li>
-                    <li class="text-center p-2">Площадь: 542 м<sup>2</sup></li>
-                    <li class="text-center p-2">Спален: <b>6</b></li>
-                </ul>
-            </div>
-        </div>
+        @include('includes.items')
     </div>
 @endsection
