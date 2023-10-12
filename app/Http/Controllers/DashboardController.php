@@ -15,7 +15,7 @@ class DashboardController extends Controller
             $features[] = [
                 "type"=>"Feature",
                 "properties" => [
-                    "name" => "Название",
+                    "name" => "Париж, Эйфелева башня",
                     "image" => "https://en.wikipedia.org/wiki/Eiffel_Tower#/media/File:Tour_Eiffel_Wikimedia_Commons.jpg"
                 ],
                 "geometry" => [

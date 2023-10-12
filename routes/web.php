@@ -22,6 +22,7 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', [Controllers\DashboardController::class, 'getIndex'])->name('dashboard');
+    Route::get('/admin_items', [Controllers\DashboardController::class, 'getIndex'])->name('admin_items');
 });
 
 

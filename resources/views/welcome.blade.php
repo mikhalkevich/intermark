@@ -1,4 +1,11 @@
 @extends('layouts.base')
+@push('scripts')
+    <script src="https://cdn.maptiler.com/maptiler-geocoder/v1.1.0/maptiler-geocoder.js"></script>
+    @vite('resources/js/map.js')
+@endpush
+@push('styles')
+    <link href="https://cdn.maptiler.com/maptiler-geocoder/v1.1.0/maptiler-geocoder.css" rel="stylesheet" />
+@endpush
 @section('content')
     <div id="default-carousel" class="relative rounded w-full top-0 left-0 z-0" data-carousel="static">
         <!-- Carousel wrapper -->

@@ -16,7 +16,7 @@ import GeoJSON from 'ol/format/GeoJSON';
 document.addEventListener('alpine:init', () => {
     Alpine.data('map', function () {
         return {
-            legendOpened: false,
+            legendOpened: true,
             map: {},
             features: [],
             initComponent(monuments) {

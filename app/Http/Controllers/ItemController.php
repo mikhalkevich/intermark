@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Item;
 use Illuminate\Http\Request;
+use App\Http\Resources\ItemResource;
 
 class ItemController extends Controller
 {
@@ -52,5 +53,9 @@ class ItemController extends Controller
         $item->delete();
         return response()->json(['message'=>'Item deleted']);
         //Item::destroy($id);
+    }
+    public function getMainPublic(){
+        $items = Item::orderBy('id','DESC')->paginate(5);
+        return ItemResource::collection($items);
     }
 }

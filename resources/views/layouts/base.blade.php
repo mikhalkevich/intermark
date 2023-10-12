@@ -8,9 +8,11 @@
 
     <!-- Fonts -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @stack('scripts')
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    @stack('styles')
 </head>
 <body class="antialiased bg-white-200">
 
@@ -81,6 +83,13 @@
                                     <li>
                                         <a href="#"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
+                                            <div class="font-semibold">Новостройки</div>
+                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                           class="block p-3 rounded-lg hover:bg-gray-50">
                                             <div class="font-semibold">Квартиры</div>
                                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
                                         </a>
@@ -88,14 +97,7 @@
                                     <li>
                                         <a href="#"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Пентхаусы</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Популярные направления</div>
+                                            <div class="font-semibold">Дома</div>
                                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
                                         </a>
                                     </li>
@@ -111,7 +113,7 @@
                                     <li>
                                         <a href="#"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Новостройки</div>
+                                            <div class="font-semibold">Пентхаусы</div>
                                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
                                         </a>
                                     </li>
@@ -140,7 +142,7 @@
                         <button data-dropdown-toggle="city" data-dropdown-trigger="hover"
                                 class="mega-menu-link flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent"
                                 type="button">
-                            Городская
+                            Зарубежная
                             <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                  fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -151,158 +153,6 @@
                         <!-- Dropdown menu -->
                         <div id="city"
                              class="z-10 w-full hidden bg-white divide-gray-100 rounded-lg shadow">
-                            <div
-                                class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
-                                <div class="text-3xl">Городская недвижимость</div>
-                                <ul aria-labelledby="mega-menu-full-dropdown-button">
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Купить</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Продать</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Популярные направления</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Арендавать</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Сдать</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Популярные направления</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul class="hidden md:block">
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Реклама</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <button data-dropdown-toggle="country" data-dropdown-trigger="hover"
-                                class="mega-menu-link flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent"
-                                type="button">
-                            Загородная
-                            <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                 fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                      stroke-width="2"
-                                      d="m1 1 4 4 4-4"/>
-                            </svg>
-                        </button>
-                        <!-- Dropdown menu -->
-                        <div id="country"
-                             class="z-10 w-full hidden bg-white divide-y divide-gray-100 rounded-lg shadow">
-                            <div
-                                class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
-                                <div class="text-3xl">Загородная недвижимость</div>
-                                <ul aria-labelledby="mega-menu-full-dropdown-button">
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Купить</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Продать</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Популярные направления</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Арендавать</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Сдать</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Популярные направления</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul class="hidden md:block">
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Реклама</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <button data-dropdown-toggle="foraign" data-dropdown-trigger="hover"
-                                class="mega-menu-link flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent"
-                                type="button">
-                            Зарубежная
-                            <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                 fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                      stroke-width="2"
-                                      d="m1 1 4 4 4-4"/>
-                            </svg>
-                        </button>
-                        <!-- Dropdown menu -->
-                        <div id="foraign"
-                             class="z-10 w-full hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                             <div
                                 class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
                                 <div class="text-3xl">Зарубежная недвижимость</div>
@@ -347,16 +197,141 @@
                                     <li>
                                         <a href="#"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
+                                            <div class="font-semibold">Популярные страны</div>
+                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <button data-dropdown-toggle="country" data-dropdown-trigger="hover"
+                                class="mega-menu-link flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent"
+                                type="button">
+                            Купить
+                            <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                 fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="m1 1 4 4 4-4"/>
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div id="country"
+                             class="z-10 w-full hidden bg-white divide-y divide-gray-100 rounded-lg shadow">
+                            <div
+                                class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
+                                <div class="text-3xl">Купить недвижимость</div>
+                                <ul aria-labelledby="mega-menu-full-dropdown-button">
+                                    <li>
+                                        <a href="#"
+                                           class="block p-3 rounded-lg hover:bg-gray-50">
+                                            <div class="font-semibold">Купить</div>
+                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                           class="block p-3 rounded-lg hover:bg-gray-50">
+                                            <div class="font-semibold">Продавцы</div>
+                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                           class="block p-3 rounded-lg hover:bg-gray-50">
+                                            <div class="font-semibold">Страны</div>
+                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="#"
+                                           class="block p-3 rounded-lg hover:bg-gray-50">
+                                            <div class="font-semibold">Направления</div>
+                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                           class="block p-3 rounded-lg hover:bg-gray-50">
+                                            <div class="font-semibold">Элитная недвижимость</div>
+                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                           class="block p-3 rounded-lg hover:bg-gray-50">
                                             <div class="font-semibold">Популярные направления</div>
                                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
                                         </a>
                                     </li>
                                 </ul>
-                                <ul class="hidden md:block">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <button data-dropdown-toggle="foraign" data-dropdown-trigger="hover"
+                                class="mega-menu-link flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent"
+                                type="button">
+                            Арендавать
+                            <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                 fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="m1 1 4 4 4-4"/>
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div id="foraign"
+                             class="z-10 w-full hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                            <div
+                                class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
+                                <div class="text-3xl">Арендавать недвижимость</div>
+                                <ul aria-labelledby="mega-menu-full-dropdown-button">
                                     <li>
                                         <a href="#"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Реклама</div>
+                                            <div class="font-semibold">Купить</div>
+                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                           class="block p-3 rounded-lg hover:bg-gray-50">
+                                            <div class="font-semibold">Элитная недвижимость</div>
+                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                           class="block p-3 rounded-lg hover:bg-gray-50">
+                                            <div class="font-semibold">Популярные направления</div>
+                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="#"
+                                           class="block p-3 rounded-lg hover:bg-gray-50">
+                                            <div class="font-semibold">Новостройки</div>
+                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                           class="block p-3 rounded-lg hover:bg-gray-50">
+                                            <div class="font-semibold">Дома</div>
+                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                           class="block p-3 rounded-lg hover:bg-gray-50">
+                                            <div class="font-semibold">Популярные направления</div>
                                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
                                         </a>
                                     </li>
@@ -368,7 +343,7 @@
                         <button data-dropdown-toggle="com" data-dropdown-trigger="hover"
                                 class="mega-menu-link flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent"
                                 type="button">
-                            Коммерческая
+                            Собственникам
                             <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                  fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -381,12 +356,12 @@
                              class="z-10 w-full hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                             <div
                                 class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
-                                <div class="text-3xl">Коммерческая недвижимость</div>
+                                <div class="text-3xl">Собственникам</div>
                                 <ul aria-labelledby="mega-menu-full-dropdown-button">
                                     <li>
                                         <a href="#"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Купить</div>
+                                            <div class="font-semibold">Сдать</div>
                                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
                                         </a>
                                     </li>
@@ -409,14 +384,14 @@
                                     <li>
                                         <a href="#"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Арендавать</div>
+                                            <div class="font-semibold">Элитная недвижимость</div>
                                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Сдать</div>
+                                            <div class="font-semibold">Реклама</div>
                                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
                                         </a>
                                     </li>
@@ -424,15 +399,6 @@
                                         <a href="#"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
                                             <div class="font-semibold">Популярные направления</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul class="hidden md:block">
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Реклама</div>
                                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
                                         </a>
                                     </li>
