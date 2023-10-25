@@ -27,5 +27,6 @@ Route::middleware([
 
 
 Route::get('/form', [Controllers\BaseController::class, 'getUrl']);
+Route::get('contact_form', [Controllers\ContactController::class, 'getContact']);
 //default url always in end
 Route::get('/{url}', [Controllers\MaintextController::class, 'getIndex']);

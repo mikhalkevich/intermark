@@ -19,6 +19,7 @@ document.addEventListener('alpine:init', () => {
             legendOpened: true,
             map: {},
             features: [],
+            activeTab: 'legend',
             initComponent(monuments) {
                 this.features = new GeoJSON().readFeatures(monuments)
 
@@ -42,7 +43,7 @@ document.addEventListener('alpine:init', () => {
                                 features: this.features,
                             }),
                             style: this.styleFunction,
-                            label: 'Виллы',
+                            label: 'Дома',
                         }),
                     ],
                     view: new View({
@@ -51,6 +52,13 @@ document.addEventListener('alpine:init', () => {
                         zoom: 2,
                     }),
                 })
+                this.map.on("singleclick", (event) => {
+                    console.log(event.coordinate);
+                    let coord_long_elem = document.getElementById('longitude');
+                    let coord_lat_elem = document.getElementById('latitude');
+                    coord_long_elem.value = event.coordinate[0];
+                    coord_lat_elem.value = event.coordinate[1];
+                });
             },
             styleFunction(feature, resolution) {
                 return new Style({

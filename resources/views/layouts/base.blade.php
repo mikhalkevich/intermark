@@ -31,7 +31,7 @@
             </li>
             <li class="nav-item">
                 <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-orange-950 hover:opacity-75"
-                   href="#pablo">
+                   href="/contact_form">
                     Обратитесь к нам!
                 </a>
             </li>
@@ -45,7 +45,10 @@
     </div>
 </div>
 <div class="w-full absolute z-10">
-    <nav class="m-4 mt-1 ml-10  rounded-b bg-gray-200 border-gray-200">
+    <nav class="m-4 mt-1 ml-10  rounded-b bg-gray-200 border-gray-200 top-0"
+         x-data="{isScrollAtTop:false}"
+         :class="{'fixed': isScrollAtTop}"
+         @scroll.window="isScrollAtTop = (window.pageYOffset > 60)?true:false">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
             <a href="https://flowbite.com" class="flex items-center">
                 <img src="/intermarklogo100x100.svg" class="absolute -top-8 left-3 mr-3 z-0" alt="Intermark logo"/>
@@ -222,27 +225,27 @@
                              class="z-10 w-full hidden bg-white divide-y divide-gray-100 rounded-lg shadow">
                             <div
                                 class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-3 md:px-6">
-                                <div class="text-3xl">Купить недвижимость</div>
+                                <div class="text-3xl">Новостройка</div>
                                 <ul aria-labelledby="mega-menu-full-dropdown-button">
                                     <li>
                                         <a href="#"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Купить</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                            <div class="font-semibold">Квартира в новостройке</div>
+                                            <span class="text-sm text-gray-500">Индонезия, Бали</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Продавцы</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                            <div class="font-semibold">Вилла на берегу окена</div>
+                                            <span class="text-sm text-gray-500">Индонезия, Бали</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Страны</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                            <div class="font-semibold">Дом в деревне</div>
+                                            <span class="text-sm text-gray-500">Россия, Васюки</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -250,8 +253,8 @@
                                     <li>
                                         <a href="#"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Направления</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                            <div class="font-semibold">Пентхаус в элитной многоэтажке</div>
+                                            <span class="text-sm text-gray-500">Россия, Санкт-Петербург.</span>
                                         </a>
                                     </li>
                                     <li>
@@ -359,24 +362,10 @@
                                 <div class="text-3xl">Собственникам</div>
                                 <ul aria-labelledby="mega-menu-full-dropdown-button">
                                     <li>
-                                        <a href="#"
+                                        <a href="/contact_form"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Сдать</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Продать</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Популярные направления</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
+                                            <div class="font-semibold">Контактная форма</div>
+                                            <span class="text-sm text-gray-500">Оставьте заявку, заполнив контакнтую форму</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -384,21 +373,7 @@
                                     <li>
                                         <a href="#"
                                            class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Элитная недвижимость</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Реклама</div>
-                                            <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                           class="block p-3 rounded-lg hover:bg-gray-50">
-                                            <div class="font-semibold">Популярные направления</div>
+                                            <div class="font-semibold">Специальное предложение</div>
                                             <span class="text-sm text-gray-500">Connect with third-party tools that you're already using.</span>
                                         </a>
                                     </li>
@@ -471,6 +446,9 @@
         </div>
         <div>
             <div class="text-center">Контакты</div>
+            <ul>
+                <li><a href="{{asset('contact_form')}}" class=" leading-snug text-orange-950 hover:opacity-75">Форма обратной связи</a></li>
+            </ul>
         </div>
     </div>
     <div class="text-center pt-10">&copy; 2023</div>
