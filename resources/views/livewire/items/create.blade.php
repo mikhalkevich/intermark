@@ -4,8 +4,8 @@
         <div>
             <x-input.label for="longitude" value="Longitude" />
             <!-- We use wire:model.defer to defer the synchronisation of the value to the next Livewire call (submit in our case) -->
-            <x-input.text wire:model.defer="coordinates.0" id="longitude" />
-            @error('coordinates.0')
+            <x-input.text  id="longitude" x-ref="longitude" wire:model="longitude"  />
+            @error('longitude')
             <div>
                 {{$message}}
             </div>
@@ -14,8 +14,8 @@
 
         <div>
             <x-input.label for="latitude" value="Latitude" />
-            <x-input.text wire:model.defer="coordinates.1" id="latitude" />
-            @error('coordinates.1')
+            <x-input.text id="latitude" wire:model="latitude" />
+            @error('latitude')
             <div>
                 {{$message}}
             </div>
@@ -24,7 +24,7 @@
 
         <div>
             <x-input.label for="name" value="Name" />
-            <x-input.text wire:model.defer="name" id="name" />
+            <x-input.text wire:model.live="name" id="name" />
             @error('name')
             <div>
                 {{$message}}
@@ -33,10 +33,10 @@
         </div>
 
         <div class="pt-3 flex justify-end items-center space-x-3">
-            <!-- Laravel Jetstream comes with built-in components, we will use them for the action message and the save button -->
-
-
              <input type="submit" name="save" value="Сохранить">
         </div>
     </form>
 </div>
+<script>
+    Livewire.emit('getLatitudeForInput', place.geometry['location'].lat());
+</script>

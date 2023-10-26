@@ -35,7 +35,7 @@ document.addEventListener('alpine:init', () => {
                                 features: this.features,
                             }),
                             style: this.styleFunction,
-                            label: 'Monuments',
+                            label: 'Достопримечательности',
                         }),
 
                         new VectorLayer({
@@ -43,7 +43,7 @@ document.addEventListener('alpine:init', () => {
                                 features: this.features,
                             }),
                             style: this.styleFunction,
-                            label: 'Дома',
+                            label: 'Виллы',
                         }),
                     ],
                     view: new View({
@@ -53,11 +53,16 @@ document.addEventListener('alpine:init', () => {
                     }),
                 })
                 this.map.on("singleclick", (event) => {
-                    console.log(event.coordinate);
                     let coord_long_elem = document.getElementById('longitude');
                     let coord_lat_elem = document.getElementById('latitude');
-                    coord_long_elem.value = event.coordinate[0];
-                    coord_lat_elem.value = event.coordinate[1];
+                     coord_long_elem.value = event.coordinate[0];
+                     //После изменения значения ввода с помощью JavaScript необходимо вызвать событие ввода, чтобы заставить LiveWire обновить модель.
+                     coord_long_elem.dispatchEvent(new Event('input'));
+                     coord_lat_elem.value = event.coordinate[1];
+                     coord_lat_elem.dispatchEvent(new Event('input'));
+                    //this.longitude = event.coordinate[0];
+                    //this.latitude = event.coordinate[1];
+
                 });
             },
             styleFunction(feature, resolution) {

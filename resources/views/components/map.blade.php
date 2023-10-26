@@ -49,7 +49,7 @@
                                            class="rounded border-slate-300 text-[#3369A1] shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                                     <span class="ml-2 text-sm text-slate-600" x-text="layer.get('label')"></span>
                                 </label>
-                                <template x-if="layer.get('label') === 'Monuments' && layer.getVisible()">
+                                <template x-if="layer.get('label') === 'Достопримечательности' && layer.getVisible()">
                                     <div class="mt-2 ml-6 text-sm text-slate-600">
                                         <template x-for="(feature, index) in layer.getSource().getFeatures()"
                                                   :key="index">
@@ -61,7 +61,7 @@
                                     </div>
                                 </template>
 
-                                <template x-if="layer.get('label') === 'Дома' && layer.getVisible()">
+                                <template x-if="layer.get('label') === 'Виллы' && layer.getVisible()">
                                     <div class="mt-2 ml-6 text-sm text-slate-600">
                                         <template x-for="(feature, index) in layer.getSource().getFeatures()"
                                                   :key="index">
